@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Tab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="apple-touch-icon" href="img/icon.jpg">
+    <link rel="icon" href="img/icon.jpg">
+    <link rel="shortcut icon" href="img/icon.jpg">
+    <link rel="apple-touch-startup-image" href="img/icon.jpg">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Klee's Agar.io">
+    <audio id="split_cell" src="audio/split.mp3"></audio>
+    <audio id="spawn_cell" src="audio/spawn.mp3"></audio>
+</head>
+<body>
+    <div id="gameAreaWrapper">
+        <div id="status"><span class="title">Leaderboard</span></div>
+        <div class="chatbox" id="chatbox">
+            <ul id="chatList" class="chat-list"></ul>
+            <input id="chatInput" type="text" class="chat-input" placeholder="Chat here..." maxlength="35" />
+        </div>
+        <div id="mobile">
+           <input type="image" id="split" class="split" src="img/split.png" alt="splitBtn">
+           <input type="image" id="feed" class="feed" src="img/feed.png" alt="feedBtn">
+        </div>
+        <canvas tabindex="1" id="cvs"></canvas>
+    </div>
+    <div id="startMenuWrapper">
+        <div id="startMenu">
+            <p>My Agar.io</p>
+            <input type="text" tabindex="0" autofocus placeholder="Enter your name here" id="playerNameInput" maxlength="25" />
+            <b class="input-error">Nick must be alphanumeric characters only!</b>
+            <br />
+            <a onclick="document.getElementById('spawn_cell').play();"><button id="startButton">Play</button></a>
+            <button id="spectateButton">Spectate</button>
+        </div>
+    </div>
+    <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
